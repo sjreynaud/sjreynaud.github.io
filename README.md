@@ -14,14 +14,17 @@ This portfolio is designed to demonstrate skills in:
 
 This template is set up to showcase your best work. You can easily customize the project cards in the `index.html` file.
 
-### Project Title One
-*A brief description of your project, the tools used, and the key insights derived.*
+### 🎯 Predictive Analytics: Breast Cancer Survival
+*🎯 Predictive Analytics: Breast Cancer Survival — This project applied machine learning to forecast 5-year survival outcomes for breast cancer patients using clinical and demographic data. Leveraging Python (Scikit-learn, XGBoost), SHAP for interpretability, and Tableau for stakeholder-facing visuals, the analysis revealed tumor stage, lymph node involvement, and hormone receptor status as top predictors. XGBoost achieved the highest ROC-AUC (0.91), and SHAP plots clarified how age and tumor size influenced survival probabilities. The final dashboard synthesized model insights into an intuitive format for clinicians, supporting risk stratification and shared decision-making.*
 
-### Project Title Two
-*A brief description of your project, the tools used, and the key insights derived.*
+### 🔬 FSGS Kidney Disease Analytics (Research Phase Ongoing)
+*🔬 FSGS Kidney Disease Analytics (Research Phase Ongoing) — This research initiative explores predictive modeling for Focal Segmental Glomerulosclerosis (FSGS), aiming to identify clinical markers linked to disease progression and renal outcomes. Using Python (Scikit-learn, Pandas) and SHAP for interpretability, the project investigates variables such as proteinuria levels, eGFR decline, and APOL1 genotype. Early findings suggest collapsing variants and biopsy patterns may significantly influence prognosis. Visual tools like Tableau and Power BI are being used to prototype stakeholder-facing dashboards, with iterative design focused on clinical relevance and transparent risk communication.*
 
-### Project Title Three
-*A brief description of your project, the tools used, and the key insights derived.*
+### 🧬 Prostate Cancer Survival Modeling (Research Phase Ongoing)
+*🧠 Prostate Cancer Survival Modeling (Research Phase Ongoing) — This ongoing research project applies machine learning to predict long-term survival outcomes in prostate cancer patients, focusing on clinical staging, PSA levels, Gleason scores, and treatment modalities. Using Python (Scikit-learn, XGBoost) and SHAP for model interpretability, the analysis aims to uncover nuanced survival patterns across risk groups. Preliminary results suggest that Gleason grade and PSA velocity are strong predictors of recurrence and mortality. Visual dashboards built in Tableau and Power BI are being iteratively designed to support urologists and oncologists in personalized treatment planning and risk communication.*
+
+### 🧬 Colon Cancer Survival Analytics (Research Phase Ongoing)
+*🧬 Colon Cancer Survival Analytics (Research Phase Ongoing) — This project investigates predictive modeling for long-term survival in colon cancer patients, focusing on clinical staging, lymph node involvement, tumor grade, and treatment pathways. Using Python (Scikit-learn, XGBoost) and SHAP for interpretability, the research aims to uncover survival disparities across demographic and molecular subgroups. Early insights suggest that microsatellite instability status and lymph node ratio are strong predictors of recurrence and mortality. Tableau and Power BI are being used to prototype stakeholder-facing dashboards, with iterative design centered on clinical relevance, transparency, and personalized risk communication.*
 
 
 ## 🛠️ Skills
