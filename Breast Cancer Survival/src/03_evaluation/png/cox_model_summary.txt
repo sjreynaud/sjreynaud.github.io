@@ -1,0 +1,135 @@
+                                    coef  exp(coef)  se(coef)  coef lower 95%  \
+covariate                                                                       
+Patient ID                      0.020235   1.020442  0.031889       -0.042265   
+Age at Diagnosis               -0.049268   0.951926  0.030440       -0.108930   
+Type of Breast Surgery         -0.020535   0.979674  0.024357       -0.068274   
+Cancer Type                     0.039185   1.039963  0.020872       -0.001724   
+Cancer Type Detailed            0.050036   1.051309  0.023965        0.003065   
+Cellularity                    -0.001846   0.998156  0.021673       -0.044323   
+Chemotherapy                    0.103376   1.108908  0.028450        0.047615   
+Pam50 + Claudin-low subtype     0.051806   1.053171  0.021560        0.009548   
+Cohort                         -0.046199   0.954852  0.025467       -0.096112   
+ER status measured by IHC      -0.029684   0.970752  0.042583       -0.113144   
+ER Status                      -0.065863   0.936259  0.043195       -0.150525   
+Neoplasm Histologic Grade      -0.051109   0.950175  0.029710       -0.109339   
+HER2 status measured by SNP6   -0.053689   0.947727  0.028201       -0.108963   
+HER2 Status                     0.002199   1.002201  0.031794       -0.060117   
+Tumor Other Histologic Subtype  0.012100   1.012174  0.032052       -0.050720   
+Hormone Therapy                 0.083788   1.087398  0.024811        0.035158   
+Inferred Menopausal State      -0.082601   0.920718  0.027620       -0.136735   
+Integrative Cluster             0.031969   1.032486  0.023921       -0.014915   
+Primary Tumor Laterality       -0.047262   0.953837  0.021467       -0.089336   
+Lymph nodes examined positive   0.041026   1.041879  0.024989       -0.007951   
+Mutation Count                 -0.023762   0.976518  0.022885       -0.068616   
+Nottingham prognostic index     0.103281   1.108803  0.034914        0.034852   
+Oncotree Code                  -0.066373   0.935782  0.030814       -0.126767   
+PR Status                      -0.087399   0.916311  0.025891       -0.138146   
+Radio Therapy                  -0.008520   0.991516  0.024983       -0.057485   
+Relapse Free Status (Months)   -1.442367   0.236368  0.032629       -1.506319   
+Relapse Free Status            -0.866585   0.420385  0.035090       -0.935361   
+3-Gene classifier subtype       0.009671   1.009718  0.029545       -0.048237   
+Tumor Size                     -0.039311   0.961452  0.022362       -0.083139   
+Tumor Stage                     0.052862   1.054284  0.026376        0.001166   
+Patient's Vital Status         -0.670008   0.511704  0.030548       -0.729882   
+
+                                coef upper 95%  exp(coef) lower 95%  \
+covariate                                                             
+Patient ID                            0.082736             0.958616   
+Age at Diagnosis                      0.010394             0.896793   
+Type of Breast Surgery                0.027203             0.934005   
+Cancer Type                           0.080094             0.998277   
+Cancer Type Detailed                  0.097007             1.003070   
+Cellularity                           0.040632             0.956645   
+Chemotherapy                          0.159137             1.048766   
+Pam50 + Claudin-low subtype           0.094064             1.009594   
+Cohort                                0.003715             0.908362   
+ER status measured by IHC             0.053776             0.893022   
+ER Status                             0.018798             0.860257   
+Neoplasm Histologic Grade             0.007121             0.896427   
+HER2 status measured by SNP6          0.001585             0.896764   
+HER2 Status                           0.064514             0.941655   
+Tumor Other Histologic Subtype        0.074920             0.950545   
+Hormone Therapy                       0.132417             1.035784   
+Inferred Menopausal State            -0.028467             0.872201   
+Integrative Cluster                   0.078853             0.985196   
+Primary Tumor Laterality             -0.005188             0.914538   
+Lymph nodes examined positive         0.090003             0.992081   
+Mutation Count                        0.021091             0.933685   
+Nottingham prognostic index           0.171711             1.035466   
+Oncotree Code                        -0.005979             0.880939   
+PR Status                            -0.036653             0.870972   
+Radio Therapy                         0.040444             0.944136   
+Relapse Free Status (Months)         -1.378415             0.221725   
+Relapse Free Status                  -0.797810             0.392444   
+3-Gene classifier subtype             0.067579             0.952908   
+Tumor Size                            0.004518             0.920223   
+Tumor Stage                           0.104558             1.001167   
+Patient's Vital Status               -0.610134             0.481966   
+
+                                exp(coef) upper 95%  cmp to          z  \
+covariate                                                                
+Patient ID                                 1.086255     0.0   0.634565   
+Age at Diagnosis                           1.010448     0.0  -1.618518   
+Type of Breast Surgery                     1.027576     0.0  -0.843107   
+Cancer Type                                1.083389     0.0   1.877354   
+Cancer Type Detailed                       1.101868     0.0   2.087856   
+Cellularity                                1.041469     0.0  -0.085160   
+Chemotherapy                               1.172499     0.0   3.633581   
+Pam50 + Claudin-low subtype                1.098630     0.0   2.402836   
+Cohort                                     1.003722     0.0  -1.814097   
+ER status measured by IHC                  1.055248     0.0  -0.697099   
+ER Status                                  1.018976     0.0  -1.524771   
+Neoplasm Histologic Grade                  1.007146     0.0  -1.720293   
+HER2 status measured by SNP6               1.001586     0.0  -1.903770   
+HER2 Status                                1.066641     0.0   0.069157   
+Tumor Other Histologic Subtype             1.077798     0.0   0.377519   
+Hormone Therapy                            1.141585     0.0   3.376994   
+Inferred Menopausal State                  0.971934     0.0  -2.990656   
+Integrative Cluster                        1.082045     0.0   1.336456   
+Primary Tumor Laterality                   0.994825     0.0  -2.201653   
+Lymph nodes examined positive              1.094177     0.0   1.641795   
+Mutation Count                             1.021315     0.0  -1.038355   
+Nottingham prognostic index                1.187335     0.0   2.958184   
+Oncotree Code                              0.994039     0.0  -2.153987   
+PR Status                                  0.964011     0.0  -3.375608   
+Radio Therapy                              1.041273     0.0  -0.341056   
+Relapse Free Status (Months)               0.251978     0.0 -44.204738   
+Relapse Free Status                        0.450314     0.0 -24.695917   
+3-Gene classifier subtype                  1.069915     0.0   0.327327   
+Tumor Size                                 1.004528     0.0  -1.757937   
+Tumor Stage                                1.110220     0.0   2.004174   
+Patient's Vital Status                     0.543278     0.0 -21.932666   
+
+                                            p    -log2(p)  
+covariate                                                  
+Patient ID                       5.257121e-01    0.927655  
+Age at Diagnosis                 1.055510e-01    3.243987  
+Type of Breast Surgery           3.991685e-01    1.324930  
+Cancer Type                      6.046956e-02    4.047647  
+Cancer Type Detailed             3.681080e-02    4.763727  
+Cellularity                      9.321342e-01    0.101390  
+Chemotherapy                     2.795146e-04   11.804789  
+Pam50 + Claudin-low subtype      1.626848e-02    5.941776  
+Cohort                           6.966283e-02    3.843467  
+ER status measured by IHC        4.857408e-01    1.041742  
+ER Status                        1.273163e-01    2.973511  
+Neoplasm Histologic Grade        8.537914e-02    3.549972  
+HER2 status measured by SNP6     5.694013e-02    4.134410  
+HER2 Status                      9.448644e-01    0.081821  
+Tumor Other Histologic Subtype   7.057880e-01    0.502693  
+Hormone Therapy                  7.328269e-04   10.414240  
+Inferred Menopausal State        2.783793e-03    8.488733  
+Integrative Cluster              1.814003e-01    2.462751  
+Primary Tumor Laterality         2.768981e-02    5.174501  
+Lymph nodes examined positive    1.006326e-01    3.312831  
+Mutation Count                   2.991047e-01    1.741278  
+Nottingham prognostic index      3.094577e-03    8.336042  
+Oncotree Code                    3.124123e-02    5.000405  
+PR Status                        7.365275e-04   10.406973  
+Radio Therapy                    7.330612e-01    0.447994  
+Relapse Free Status (Months)     0.000000e+00         inf  
+Relapse Free Status             1.183162e-134  444.895717  
+3-Gene classifier subtype        7.434206e-01    0.427749  
+Tumor Size                       7.875831e-02    3.666424  
+Tumor Stage                      4.505147e-02    4.472282  
+Patient's Vital Status          1.267787e-106  351.782066  
