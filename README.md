@@ -12,7 +12,6 @@ This portfolio is designed to demonstrate skills in:
 
 ## 🚀 Projects
 
-This template is set up to showcase your best work. You can easily customize the project cards in the `index.html` file.
 
 ### 🎯 Predictive Analytics: Breast Cancer Survival
 *🎯 Predictive Analytics: Breast Cancer Survival — This project applied machine learning to forecast 5-year survival outcomes for breast cancer patients using clinical and demographic data. Leveraging Python (Scikit-learn, XGBoost), SHAP for interpretability, and Tableau for stakeholder-facing visuals, the analysis revealed tumor stage, lymph node involvement, and hormone receptor status as top predictors. XGBoost achieved the highest ROC-AUC (0.91), and SHAP plots clarified how age and tumor size influenced survival probabilities. The final dashboard synthesized model insights into an intuitive format for clinicians, supporting risk stratification and shared decision-making.*
