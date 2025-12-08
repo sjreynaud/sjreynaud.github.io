@@ -1,0 +1,1 @@
+covariate,coefficient,hazard_ratio,std_error,coef lower 95%,coef upper 95%,exp(coef) lower 95%,exp(coef) upper 95%,cmp to,z_score,p_value,-log2(p)
