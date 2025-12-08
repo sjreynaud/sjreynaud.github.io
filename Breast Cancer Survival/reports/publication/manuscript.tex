@@ -1,0 +1,40 @@
+
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\title{Clinical Survival Profiling in METABRIC}
+\author{Sidney}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Brief overview of dataset and clinical context.
+
+\section{Methods}
+Kaplan--Meier estimation by subtype; Cox proportional hazards on selected covariates.
+
+\section{Results}
+\subsection{Descriptive Statistics}
+See Table~\ref{tab:coxph}. Numeric and categorical summaries are provided in the GitHub repository.
+
+\subsection{Survival Curves}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.85\textwidth]{../figures/KM_ER Status.png}
+\caption{Kaplan--Meier overall survival by ER Status}
+\end{figure}
+
+\subsection{Regression}
+\input{../tables/coxph_summary.tex}
+
+\section{Discussion}
+Clinical interpretation of differences across subtypes and covariates.
+
+\section{Reproducibility}
+All figures and tables generated via Google Colab; schema snapshot and code are versioned.
+
+\end{document}
