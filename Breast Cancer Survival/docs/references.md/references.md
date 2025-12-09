@@ -1,0 +1,23 @@
+#4 References
+
+## Datasets
+- **METABRIC dataset:** Original publication and data source citations to be added based on your local data license and release notes.
+
+## Survival analysis textbooks and methods
+- **Cox PH:** Cox DR. Regression models and life-tables. Journal of the Royal Statistical Society, Series B (1972).
+- **Survival fundamentals:** Kleinbaum & Klein. Survival Analysis: A Self-Learning Text.
+- **Random survival forests:** Ishwaran H, Kogalur UB, Blackstone EH, Lauer MS. Random survival forests. The Annals of Applied Statistics (2008).
+
+## Software and libraries
+- **Python survival modeling:** lifelines; scikit-survival
+- **Model interpretation:** SHAP (with caution for survival); PDP/ICE
+- **Visualization:** matplotlib, seaborn
+
+## Reproducibility and reporting
+- **Workflow transparency:** Peng RD. Reproducible research in computational science. Science (2011).
+- **Calibration and validation:** Gerds TA, Schumacher M. On C-index and Brier score for survival prediction.
+
+## To be populated automatically
+- **Notebook-to-output mapping:** Generated in outputs/run_metadata/reports_index.md
+- **Package versions:** Generated in outputs/run_metadata/environment.md
+- **Data profile:** Generated in outputs/data_profile/summary.md
