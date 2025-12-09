@@ -1,0 +1,50 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+.env
+.venv/
+venv/
+.envrc
+
+# Jupyter/Colab
+.ipynb_checkpoints/
+*.ipynb~*
+
+# Logs and temp
+*.log
+*.tmp
+tmp/
+.temporary/
+
+# Data (track curated small samples; ignore large/raw by default)
+data/raw/
+data/intermediate/
+data/private/
+data/*.parquet
+data/*.feather
+data/*.h5
+data/*.xlsx
+
+# Allow the main processed CSV if desired:
+# !data/METABRIC_cleaned_imputed.csv
+
+# Outputs and artifacts (you may selectively track figures/tables)
+outputs/
+reports/
+artifacts/
+
+# Model files
+models/
+*.pkl
+*.joblib
+
+# IDE/project files
+.vscode/
+.idea/
