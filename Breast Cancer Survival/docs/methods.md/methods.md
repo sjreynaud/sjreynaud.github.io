@@ -1,0 +1,68 @@
+#3 Methods
+
+## Study design
+This is a retrospective, observational analysis of the METABRIC dataset focusing on overall survival. The workflow emphasizes reproducibility, clear preprocessing, transparent modeling choices, and interpretable reporting for clinical stakeholders.
+
+## Data preprocessing
+- **Data loading:** Read METABRIC_cleaned_imputed.csv with explicit dtypes; validate schema
+- **Train/test split:** Stratified on event indicator when appropriate; temporal leakage minimized by using baseline covariates only
+- **Variable handling:**
+  - **Numeric:** Standardized (z-score) after train/test split to prevent leakage
+  - **Categorical:** One-hot encoding with explicit feature name construction for traceability
+  - **Dates/times:** Survival time in months; event indicator binary
+- **Imputation:** Already performed in source file; residual missingness checked and documented in outputs/data_quality/missingness.md
+- **Feature registry:** A YAML/JSON registry maps original variables to engineered features for interpretability
+
+## Clinical variables of interest
+- **Demographics:** Age at diagnosis
+- **Tumor characteristics:** Size, grade, nodal status, ER/PR/HER2, molecular subtype
+- **Treatment proxies:** Surgery, chemo, endocrine where available
+- **Genomic features:** Included if present; handled with dimensionality reduction only if clinically justified
+
+## Outcomes
+- **Primary outcome:** Overall survival
+- **Definition:** Time-to-event (months) with event indicator; censoring respected
+
+## Statistical analysis
+- **Univariate survival:** Kaplan–Meier curves; log-rank tests for categorical strata
+- **Multivariable survival models:**
+  - **Cox proportional hazards (Cox PH):** Baseline model for interpretability
+    - Hazard:
+
+      
+\[
+      h(t \mid X) = h_0(t) \exp(\beta^\top X)
+      \]
+
+
+
+    - **Assumptions:** Proportional hazards tested via Schoenfeld residuals
+    - **Reporting:** Coefficients, hazard ratios (HR), 95% CIs, p-values
+  - **Random survival forests (RSF):** Nonlinear model for robustness
+    - **Reporting:** Variable importance; risk stratification
+- **Model validation:**
+  - **Internal validation:** 5-fold cross-validation (time-respecting folds as feasible)
+  - **Metrics:** Concordance index (C-index), integrated Brier score (IBS), time-dependent AUC
+- **Calibration and interpretability:**
+  - **Calibration:** Risk deciles vs. observed outcomes; calibration plots
+  - **Interpretability:** Coefficients (Cox), partial dependence for RSF; SHAP adapted to survival risks where methodologically suitable
+
+## Assumption checks
+- **Proportional hazards:** Schoenfeld residual tests; time-varying effects considered if violations observed
+- **Influential observations:** DFBETA-like diagnostics; sensitivity analyses with/without outliers
+- **Missingness impact:** Imputation strategy reviewed; sensitivity to alternative imputations documented
+
+## Reproducibility
+- **Environment:** Pinned versions in requirements.txt and Colab cell prints
+- **Run metadata:** Each output includes dataset hash, git commit, timestamp, and code cell ID
+- **Outputs:** Figures/tables saved with deterministic filenames linking to notebook cells
+
+## Limitations
+- **Observational data:** Confounding and selection bias possible
+- **Measurement error:** Clinical variables may be heterogeneously measured
+- **Generalizability:** Findings reflect METABRIC cohort; external validation needed
+
+## Reporting standards
+- **Clinical:** Transparent presentation of HRs, CIs, and clinically meaningful stratifications
+- **Statistical:** Clearly state assumptions, validation strategy, and caveats
+- **Reproducible artifacts:** All plots/tables traced to code and parameters in outputs/
