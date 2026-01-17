@@ -1,0 +1,14 @@
+
+name: fsgs_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - lifelines
+  - reportlab
