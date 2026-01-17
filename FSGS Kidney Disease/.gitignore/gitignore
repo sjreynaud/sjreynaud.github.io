@@ -1,0 +1,13 @@
+
+# Ignore data outputs
+*.csv
+*.xlsx
+*.pdf
+*.png
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Colab checkpoints
+.ipynb_checkpoints/
