@@ -13,15 +13,16 @@ Whether you’re here to explore my machine learning pipelines, review my academ
 
 ## About My Portfolio 
 
-This portfolio highlights my work in clinical and predictive analytics, showcasing how I transform complex healthcare data into clear, actionable insights. Each project demonstrates my ability to blend rigorous data science with intuitive communication, emphasizing:
+My work centers on transforming complex clinical and healthcare data into insights that genuinely support decision-making. I specialize in clinical and predictive analytics, blending rigorous data science with clear, intuitive communication so that every model, dashboard, and workflow is both technically sound and easy to understand.
 
-•	Predictive modeling and survival analysis across oncology, nephrology, and chronic disease contexts
-•	Transparent, interpretable machine learning using SHAP, Scikit learn, and XGBoost
-•	Data visualization and storytelling through Tableau and Power BI
-•	Designing interactive, clinician-ready dashboards that support decision making
-•	Turning high-dimensional clinical data into meaningful, real-world insights
+Across oncology, nephrology, psychiatry, and chronic disease research, I design analytical pipelines that emphasize:
+•	Predictive modeling and survival analysis tailored to real-world clinical questions
+•	Transparent, interpretable machine learning using SHAP, Scikit learn, XGBoost, and reproducible Python workflows
+•	Data visualization and narrative storytelling through Tableau, Power BI, and clinician ready dashboards
+•	High-dimensional clinical data transformation into meaningful, actionable insights for diverse stakeholders
 
-Across these projects, my focus remains consistent: build reproducible, well-documented analytical workflows that elevate understanding, support clinical reasoning, and make data accessible to diverse stakeholders.
+At the core of my portfolio is a commitment to reproducibility, clarity, and scientific integrity. Every project is built with a modular structure, thorough documentation, and audience-aware explanations — ensuring that complex analytics become accessible, trustworthy, and ready for real-world impact.
+
 
 
 ## 🚀 Projects
