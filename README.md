@@ -1,6 +1,15 @@
 # Sidney Reynaud, Jr. - Data Scientist Portfolio
 
-Welcome! This repository contains the complete template for a professional, one-page data analysis portfolio website, hosted for free on GitHub Pages.
+I’m Sidney Reynaud, Jr., a data scientist dedicated to building clear, reproducible, and publication-ready analytical workflows. My work sits at the intersection of clinical research, machine learning, and cloud-scale data engineering, with a strong focus on transforming complex datasets into insights that genuinely support decision-making.
+This portfolio showcases the projects, pipelines, and documentation frameworks I’ve developed across oncology, psychiatric disorders, and kidney disease research. Each project reflects my commitment to:
+
+•	Modular, transparent, and scalable workflows
+•	Audience-aware documentation that supports collaboration
+•	Reproducible analytics grounded in clinical and scientific rigor
+•	Continuous learning as I expand my expertise through doctoral research
+
+Whether you’re here to explore my machine learning pipelines, review my academic writing, or see how I structure end-to-end research documentation, I’m glad you stopped by. This space represents not just my work, but the clarity, integrity, and care I bring to every project.
+
 
 ## About My Portfolio 
 
