@@ -2,13 +2,21 @@
 
 Welcome! This repository contains the complete template for a professional, one-page data analysis portfolio website, hosted for free on GitHub Pages.
 
-## About This Portfolio Template
+## About My Portfolio 
 
-This portfolio is designed to demonstrate skills in:
-- Data visualization and storytelling
-- Data modeling and analysis
-- Creating interactive, professional dashboards
-- Transforming complex data into actionable insights
+This portfolio highlights my work in clinical and predictive analytics, showcasing how I transform complex healthcare data into clear, actionable insights. Each project demonstrates my ability to blend rigorous data science with intuitive communication, emphasizing:
+
+Predictive modeling and survival analysis across oncology, nephrology, and chronic disease contexts
+
+Transparent, interpretable machine learning using SHAP, Scikit‑learn, and XGBoost
+
+Data visualization and storytelling through Tableau and Power BI
+
+Designing interactive, clinician‑ready dashboards that support decision‑making
+
+Turning high‑dimensional clinical data into meaningful, real‑world insights
+
+Across these projects, my focus remains consistent: build reproducible, well‑documented analytical workflows that elevate understanding, support clinical reasoning, and make data accessible to diverse stakeholders.
 
 ## 🚀 Projects
 
