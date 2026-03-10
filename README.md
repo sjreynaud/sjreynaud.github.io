@@ -45,10 +45,16 @@ At the core of my portfolio is a commitment to reproducibility, clarity, and sci
 
 Update the `index.html` file to reflect your personal technical skillset. The template is organized into key categories:
 
-- **Data Visualization**: Power BI, Tableau, Matplotlib, etc.
-- **Data Analysis**: SQL, Python (Pandas), R, Excel, etc.
-- **Data Modeling**: Power Query, DAX, Star Schema Design, etc.
-- **Tools**: List any other relevant tools like Power BI Service, specific cloud platforms, etc.
+My work centers on transforming complex clinical and healthcare data into insights that genuinely support decision-making. I specialize in clinical and predictive analytics, blending rigorous data science with clear, intuitive communication so that every model, dashboard, and workflow is both technically sound and easy to understand.
+
+Across oncology, nephrology, psychiatry, and chronic disease research, I design analytical pipelines that emphasize:
+•	Predictive modeling and survival analysis tailored to real-world clinical questions
+•	Transparent, interpretable machine learning using SHAP, Scikit learn, XGBoost, and reproducible Python workflows
+•	Data visualization and narrative storytelling through Tableau, Power BI, and clinician ready dashboards
+•	High-dimensional clinical data transformation into meaningful, actionable insights for diverse stakeholders
+
+At the core of my portfolio is a commitment to reproducibility, clarity, and scientific integrity. Every project is built with a modular structure, thorough documentation, and audience-aware explanations — ensuring that complex analytics become accessible, trustworthy, and ready for real-world impact.
+
 
 ## 💡 How to Use This Template
 
