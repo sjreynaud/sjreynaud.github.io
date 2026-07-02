@@ -1,204 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--💡UPDATE: Change the title to your name-->
-    <title>Sidney J Reynaud, Jr. | Data Science Projects</title>
-      
-    <!--💡UPDATE: Add your favicon here. You can generate one at realfavicongenerator.net-->
-    <link rel="icon" type="image/png" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="/favicon-32x32.png">
-    
-    <!-- Google Fonts for Elegant Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!-- Your Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    
+<!-- ====== HEADER SECTION ====== -->
+<header style="text-align:center; padding: 40px 0; background-color: #A3A3A3; color: white;">
+  <h1 style="margin:0; font-size: 40px; font-weight: 700;">
+    Study by Margaret Doe
+  </h1>
+  <p style="margin-top: 20px; font-size: 20px;">
+    Data Scientist | Clinical Researcher | Analytics Engineer
+  </p>
 
-<!-- HEADER SECTION -->
-<header>
-    <div class="container">
-        <!--💡UPDATE: Change to your name and title-->
-        <h1>Sidney J Reynaud, Jr</h1>
-        <p>Data Scientist  | Clinical Researcher |  Analytics Engineer</p>
-        <div class="social-links">
-            <!--💡UPDATE: Add your social media links and CV file-->
-            <a href="https://linkedin.com/in/sidneyreynaud" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/sjreynaud" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="assets/images/Sidney Reynaud_cv.pdf" download title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
-        </div>
-    </div>
+  <!-- ICON ROW -->
+  <div style="margin-top: 30px;">
+    <a href="https://github.com/margaretdoe" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+           width="40" alt="GitHub" />
+    </a>
+    <a href="https://linkedin.com/in/margaretdoe" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+           width="40" alt="LinkedIn" />
+    </a>
+    <a href="Margaret_Doe_Resume.pdf" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/file/file-original.svg"
+           width="40" alt="Resume" />
+    </a>
+  </div>
 </header>
+<!-- END HEADER SECTION -->
 
-<!-- NAVIGATION -->
-<nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
 
-<!-- ABOUT SECTION -->
-<section id="about" class="section">
-    <div class="container">
-        <h2>Welcome To My Projects</h2>
-        <div class="about-content">
-            <!--💡UPDATE: Change the image to your own profile photo in assets/images/-->
-            <img src="assets/images/Linkedlin Profile.png" alt="Sidney J Reynaud, Jr." class="profile-photo">
-            <div class="about-text">
-                <!--💡UPDATE: Write your own 'About Me' text here-->
-                <p> Hey everyone, I'm Sidney. With over a decade in lab operations and clinical analytics, I build reproducible, stakeholder-ready solutions that bridge technical depth with human relevance.</p>
-                <p> My portfolio explores predictive modeling, survival analysis, and disease trajectories across breast, prostate, and colon cancer, FSGS kidney disease, bipolar disorder, schizophrenia, and autism spectrum development. I work hands-on with Python, AWS, SHAP, LIME, Tableau, Power BI, and Looker Studio—delivering cloud-based ETL pipelines, interpretable models, and visual storytelling with version control and transparency.</p>
-                <p> Some of this research is still ongoing, and every project reflects a commitment to clarity, ethics, and actionable insight—because healthcare data deserves nothing less.</p>
-            </div>
-        </div>
-    </div>
+<!-- ====== ABOUT SECTION ====== -->
+<section style="padding: 50px 0; background-color: #f5f5f5; text-align: center;">
+  <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 30px;">About Me</h2>
+
+  <img src="YOUR_PROFILE_PICTURE.jpg"
+       alt="Profile Picture"
+       style="width:180px; height:180px; border-radius:50%; object-fit:cover; margin-bottom:20px;">
+
+  <p style="max-width: 700px; margin: 0 auto; font-size: 18px; line-height: 1.6;">
+    I am a Data Scientist and Clinical Researcher with a passion for building predictive models,
+    analyzing complex biomedical datasets, and developing analytics solutions that support
+    healthcare decision-making. My work spans cancer survival modeling, probabilistic graphical
+    models, clustering, and exploratory data analysis.
+  </p>
 </section>
+<!-- END ABOUT SECTION -->
 
 
+<!-- ====== PROJECTS SECTION WITH SCROLLING BAR ====== -->
+<section style="padding: 40px 0; text-align: center;">
+  <h2 style="font-size: 30px; font-weight: 600;">Data Science Projects</h2>
 
-<!-- ===== PROJECTS SECTION ===== -->
-<head>
-    <title>My Projects</title>
-</head>
+  <!-- Horizontal Scroll Container -->
+  <div style="
+      display: flex;
+      overflow-x: auto;
+      gap: 30px;
+      padding: 20px;
+      white-space: nowrap;
+      scrollbar-width: thin;
+      scrollbar-color: #888 #e0e0e0;
+    ">
 
-<<body style="margin: 0 auto; width: 80%; text-align: center;">
->
-    <h1>My Data Science Projects</h1>
+    <!-- PROJECT CARD TEMPLATE -->
+    <div style="min-width: 250px; background:#fafafa; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Breast Cancer Survival</h3>
+      <a href="https://github.com/margaretdoe/BreastCancerSurvival" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge" />
+      </a>
+    </div>
 
-    <ul>
-        
-        <section>
-            <h3>Project 1: Breast Cancel Survival </h3>
+    <div style="min-width: 250px; background:#fafafa; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h3>PGM Kidney Diseases</h3>
+      <a href="https://github.com/margaretdoe/KidneyDiseases" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge" />
+      </a>
+    </div>
 
-            <a href="https://github.com/sjreynaud/sjreynaud.github.io/tree/main/Breast%20Cancer%20Survival">
-                <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
-            </a>
+    <div style="min-width: 250px; background:#fafafa; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Prostate Cancer Survival</h3>
+      <a href="https://github.com/margaretdoe/ProstateCancerSurvival" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge" />
+      </a>
+    </div>
 
-            <a href="https://public.tableau.com/app/profile/sidney.reynaud/viz/BreastCancerSurvival_17632131928400/Dashboard1">
-                <img src="https://img.shields.io/badge/Dashboards-2E8B57?style=for-the-badge">
-            </a>
-        </section>
+    <div style="min-width: 250px; background:#fafafa; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Bipolar Disorders</h3>
+      <a href="LINK_TO_BIPOLAR_PJ" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge" />
+      </a>
+    </div>
 
-        <section>
-            <h3>Project 2: FSGS Kidney Disease</h3>
+    <div style="min-width: 250px; background:#fafafa; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Fibrillar Disorders</h3>
+      <a href="LINK_TO_FIBRILLAR_PJ" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge" />
+      </a>
+    </div>
 
-            <a href="https://github.com/sjreynaud/sjreynaud.github.io/tree/main/FSGS%20Kidney%20Disease">
-                <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
-            </a>
+    <div style="min-width: 250px; background:#fafafa; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Action Spectrum</h3>
+      <a href="LINK_TO_ACTION_PJ" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge" />
+      </a>
+    </div>
 
-            <a href="https://public.tableau.com/app/profile/sidney.reynaud/viz/FSGSKidneyDisease/Dashboard1">
-                <img src="https://img.shields.io/badge/Dashboards-2E8B57?style=for-the-badge">
-            </a>
-        </section>
-        <section>
-            <h3>Project 3: Colon Cancer Survival</h3>
+    <div style="min-width: 250px; background:#fafafa; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Lymph Node Cancer</h3>
+      <a href="LINK_TO_LYMPH_PJ" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge" />
+      </a>
+    </div>
 
-            <a href="https://github.com/sjreynaud/sjreynaud.github.io/tree/main/Colon%20Cancer%20Survival">
-                <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
-            </a>
+    <div style="min-width: 250px; background:#fafafa; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Bankruptcy-EDA Clustering</h3>
+      <a href="LINK_TO_BANKRUPTCY_PJ" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge" />
+      </a>
+    </div>
 
-            <a href="https://public.tableau.com/app/profile/sidney.reynaud/viz/ColonCancer_17749991008910/Dashboard1">
-                <img src="https://img.shields.io/badge/Dashboards-2E8B57?style=for-the-badge">
-            </a>
-        </section>
-
-        <section>
-            <h3>Project 4: Prostate Cancer Survival</h3>
-
-            <a href="https://github.com/sjreynaud/sjreynaud.github.io/tree/main/Prostate%20Cancer%20Survival">
-                <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
-            </a>
-
-            <a href="https://public.tableau.com/app/profile/sidney.reynaud/viz/ProstateCancer_17755983264730/Dashboard1">
-                <img src="https://img.shields.io/badge/Dashboards-2E8B57?style=for-the-badge">
-            </a>
-        </section>
-
-        <section>
-            <h3>Project 5: Bankruptcy-EDA-Clustering</h3>
-
-            <a href="LINK_TO_DOCS_5">
-                <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
-            </a>
-
-            <a href="LINK_TO_DASHBOARDS_5">
-                <img src="https://img.shields.io/badge/Dashboards-2E8B57?style=for-the-badge">
-            </a>
-        </section>
-
-        <section>
-            <h3>Project 6: Bipolar Disorder</h3>
-
-            <a href="LINK_TO_DOCS_2">
-                <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
-            </a>
-
-            <a href="LINK_TO_DASHBOARDS_2">
-                <img src="https://img.shields.io/badge/Dashboards-2E8B57?style=for-the-badge">
-            </a>
-        </section>
-
-        <section>
-            <h3>Project 7: Bipolar Disorder</h3>
-
-            <a href="LINK_TO_DOCS_2">
-                <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
-            </a>
-
-            <a href="LINK_TO_DASHBOARDS_2">
-                <img src="https://img.shields.io/badge/Dashboards-2E8B57?style=for-the-badge">
-            </a>
-        </section>
-      
-        <section>
-            <h3>Project 8: Autism Spectrum </h3>
-
-            <a href="LINK_TO_DOCS_3">
-                <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
-            </a>
-
-            <a href="LINK_TO_DASHBOARDS_3">
-                <img src="https://img.shields.io/badge/Dashboards-2E8B57?style=for-the-badge">
-            </a>
-        </section>
-
-        <section>
-            <h3>Project 9: Lymph Node Cancer</h3>
-
-            <a href="LINK_TO_DOCS_4">
-                <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
-            </a>
-
-            <a href="LINK_TO_DASHBOARDS_4">
-                <img src="https://img.shields.io/badge/Dashboards-2E8B57?style=for-the-badge">
-            </a>
-        </section>
-
-        <section>
-            <h3>Project 10: Bankruptcy-EDA-Clustering </h3>
-
-            <a href="https://github.com/sjreynaud/Bankruptcy-EDA-Clustering">
-                <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
-            </a>
-
-            <a href="LINK_TO_DASHBOARDS_5">
-                <img src="https://img.shields.io/badge/Dashboards-2E8B57?style=for-the-badge">
-            </a>
-        </section>
-    </ul>
-</body>
-</html>
+  </div>
+</section>
+<!-- END PROJECTS SECTION -->
