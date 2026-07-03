@@ -1,1 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidney J Reynaud, Jr. | Data Scientist Projects</title>
+    
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/favicon-32x32.png">
+    
+    <!-- Google Typography -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        /* BASE & SYSTEM STYLES */
+        :root {
+            --primary: #0A2342;
+            --secondary: #2E8B57;
+            --accent: #4B9CD3;
+            --text-dark: #333333;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER SECTION */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: var(--primary);
+            color: var(--text-light);
+        }
+
+        header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            font-size: 28px;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* SECTIONS GENERAL */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            color: var(--primary);
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary);
+            margin: 10px auto 0 auto;
+        }
+
+        /* ABOUT SECTION */
+        #about {
+            background-color: var(--text-light);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .about-text p {
+            font-size: 17px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* PROJECTS SECTION & HORIZONTAL SCROLL */
+        #projects {
+            background-color: var(--bg-light);
+            overflow: hidden; /* Prevents container from stretching layout */
+        }
+
+        .projects-scroll-container {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 25px;
+            padding: 20px 20px 40px 20px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: auto; /* Makes standard scrollbar interactive */
+        }
+
+        /* Customize scrollbar layout aesthetics */
+        .projects-scroll-container::-webkit-scrollbar {
+            height: 10px;
+        }
+        .projects-scroll-container::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 5px;
+        }
+        .projects-scroll-container::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        .projects-scroll-container::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
+        }
+
+        /* PROJECT CARDS */
+        .project-card {
+            flex: 0 0 320px; /* Fixed card size inside horizontal sequence */
+            scroll-snap-align: start;
+            background-color: var(--text-light);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--primary);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .project-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* BUTTONS */
+        .project-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 10px 12px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--text-light);
+        }
+
+        .btn-primary:hover {
+            background-color: #357ca5;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--text-light);
+        }
+
+        .btn-secondary:hover {
+            background-color: #1e5c39;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            header h1 {
+                font-size: 32px;
+            }
+            .project-card {
+                flex: 0 0 280px; /* Marginally narrower elements on mobile Viewports */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="container">
+            <h1>Sidney J Reynaud, Jr.</h1>
+            <p>Data Scientist | Clinical Researcher | Analytics Engineer</p>
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="assets/images/Sidney Reynaud_cv.pdf" download title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Welcome To My Projects</h2>
+            <div class="about-content">
+                <img src="assets/images/Linkedlin Profile.png" alt="Sidney J Reynaud, Jr." class="profile-photo">
+                <div class="about-text">
+                    <p>Hey everyone, I'm Sidney. With over a decade in lab operations and clinical analytics, I build reproducible, scalable pipelines and clear business data infrastructure.</p>
+                    <p>My portfolio explores predictive modeling, survival analysis, and disease trajectories across breast, prostate, colon, and kidney conditions.</p>
+                    <p>Some of this research is still ongoing, and every project reflects a commitment to clarity, ethics, and actionable discovery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION (HORIZONTAL SCROLLING) -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>My Projects</h2>
+        </div>
+        
+        <div class="projects-scroll-container">
+            
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-card-content">
+                    <h3>Breast Cancer Survival</h3>
+                    <p>Predictive pipeline and evaluation metrics modeling breast cancer clinical trajectories.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/sjreynaud.github.io/tree/main/Breast%20Cancer%20Survival" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> Docs</a>
+                        <a href="https://tableau.com" target="_blank" class="btn btn-secondary"><i class="fas fa-chart-bar"></i> Dashboard</a>
 
