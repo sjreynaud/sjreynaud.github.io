@@ -96,6 +96,49 @@ header p {
     transform: translateY(-3px);
 }
 
+/* Container to align them side-by-side */
+div {
+  display: flex;
+  gap: 12px; /* Spaces the buttons apart */
+}
+
+/* Base button styles for both links */
+.badge-link {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: Arial, sans-serif; /* Adjust to match your project font */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px; /* Rounded corners */
+  text-align: center;
+  transition: all 0.2s ease; /* Smooth hover effect */
+}
+
+/* Solid Blue Button */
+.badge-solid {
+  background-color: #1a2a4e; /* Dark blue color */
+  color: #ffffff;
+  border: 2px solid #1a2a4e;
+}
+
+.badge-solid:hover {
+  background-color: #111c35; /* Darkens slightly on hover */
+  border-color: #111c35;
+}
+
+/* White Outline Button */
+.badge-outline {
+  background-color: #ffffff;
+  color: #1a2a4e;
+  border: 2px solid #1a2a4e; /* Blue outline border */
+}
+
+.badge-outline:hover {
+  background-color: #f4f6f9; /* Light grey tint on hover */
+}
+
+
 /* --- 4. Navigation --- */
 nav {
     background-color: rgba(26, 42, 76, 0.95); /* Adjusted for new primary color */
@@ -137,6 +180,7 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 50%;
 }
+
 
 /* --- 5. Sections --- */
 .section {
@@ -456,8 +500,10 @@ footer p {
         border-bottom: 1px solid #e9ecef;
         padding-bottom: 30px;
     }
+    
+    
 
-  
+    
 }
 
 
