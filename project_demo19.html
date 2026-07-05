@@ -1,1 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidney J Reynaud Jr – Portfolio</title>
 
+<style>
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #0A2342;
+    color: white;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.icon-row {
+    margin-top: 20px;
+}
+
+.icon-row a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.icon-row a:hover {
+    transform: scale(1.1);
+}
+
+.icon-row img {
+    width: 40px;
+}
+
+/* ABOUT ME SECTION */
+.about-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.about-container img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #0A2342;
+    margin-bottom: 10px;
+}
+
+/* PROJECT SECTION */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 32px;
+    color: #0A2342;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-top: 5px;
+    color: #4B9CD3;
+}
+
+/* HORIZONTAL SCROLL */
+.projects-carousel-container {
+    margin-top: 30px;
+}
+
+.projects-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+}
+
+.projects-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-carousel::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb {
+    background: #4B9CD3;
+    border-radius: 4px;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb:hover {
+    background: #0A2342;
+}
+
+/* PROJECT CARD */
+.project-card {
+    flex: 0 0 300px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #0A2342;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    min-height: 44px;
+}
+
+.badge-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.badge-links a img {
+    width: 140px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>Sidney J Reynaud, Jr.</h1>
+    <p>Data Scientist | Clinical Researcher | Analytics Engineer</p>
+
+    <div class="icon-row">
+        <a href="https://linkedin.com/in/sidneyreynaud" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/sjreynaud" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+        </a>
+        <a href="assets/images/Sidney Reynaud_cv.pdf" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/file-pdf.svg" alt="CV">
+        </a>
+    </div>
+</header>
+
+<!-- ABOUT ME -->
+<div class="about-container">
+    <img src="assets/images/Linkedlin Profile.png" alt="Profile Picture">
+    <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+            Add your professional summary here. This section supports multiple paragraphs and can highlight your
+            clinical analytics expertise, AWS cloud background, dashboard engineering, and ongoing research in
+            oncology, psychiatry, and chronic disease modeling.
+        </p>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<main>
+    <h2>My Data Science Projects</h2>
+    <p class="subtitle">Healthcare</p>
+
+    <div class="projects-carousel-container">
+        <div class="projects-carousel">
+
+            <!-- PROJECT TEMPLATE -->
+            <!-- Repeat for each project -->
+
+            <div class="project-card">
+                <h3>Breast Cancer Survival</h3>
+                <div class="badge-links">
+                    <a href="LINK_TO_DOCS_1" target="_blank">
+                        <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
+                    </a>
+                    <a href="LINK_TO_DASHBOARD_1" target="_blank">
+                        <img src="https://img.shields.io/badge/View_Dashboard-2E8B57?style=for-the-badge">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>FSGS Kidney Disease</h3>
+                <div class="badge-links">
+                    <a href="LINK_TO_DOCS_2" target="_blank">
+                        <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
+                    </a>
+                    <a href="LINK_TO_DASHBOARD_2" target="_blank">
+                        <img src="https://img.shields.io/badge/View_Dashboard-2E8B57?style=for-the-badge">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Colon Cancer Survival</h3>
+                <div class="badge-links">
+                    <a href="LINK_TO_DOCS_3" target="_blank">
+                        <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
+                    </a>
+                    <a href="LINK_TO_DASHBOARD_3" target="_blank">
+                        <img src="https://img.shields.io/badge/View_Dashboard-2E8B57?style=for-the-badge">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Prostate Cancer Survival</h3>
+                <div class="badge-links">
+                    <a href="LINK_TO_DOCS_4" target="_blank">
+                        <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
+                    </a>
+                    <a href="LINK_TO_DASHBOARD_4" target="_blank">
+                        <img src="https://img.shields.io/badge/View_Dashboard-2E8B57?style=for-the-badge">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Bankruptcy EDA + Clustering</h3>
+                <div class="badge-links">
+                    <a href="LINK_TO_DOCS_5" target="_blank">
+                        <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
+                    </a>
+                    <a href="LINK_TO_DASHBOARD_5" target="_blank">
+                        <img src="https://img.shields.io/badge/View_Dashboard-2E8B57?style=for-the-badge">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Bipolar Disorder</h3>
+                <div class="badge-links">
+                    <a href="LINK_TO_DOCS_6" target="_blank">
+                        <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
+                    </a>
+                    <a href="LINK_TO_DASHBOARD_6" target="_blank">
+                        <img src="https://img.shields.io/badge/View_Dashboard-2E8B57?style=for-the-badge">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Autism Spectrum Modeling</h3>
+                <div class="badge-links">
+                    <a href="LINK_TO_DOCS_7" target="_blank">
+                        <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
+                    </a>
+                    <a href="LINK_TO_DASHBOARD_7" target="_blank">
+                        <img src="https://img.shields.io/badge/View_Dashboard-2E8B57?style=for-the-badge">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Lymph Node Cancer</h3>
+                <div class="badge-links">
+                    <a href="LINK_TO_DOCS_8" target="_blank">
+                        <img src="https://img.shields.io/badge/Documents-4B9CD3?style=for-the-badge">
+                    </a>
+                    <a href="LINK_TO_DASHBOARD_8" target="_blank">
+                        <img src="https://img.shields.io/badge/View_Dashboard-2E8B57?style=for-the-badge">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
