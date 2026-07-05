@@ -1,3 +1,99 @@
+/* HEADER */
+header {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #0A2342;
+  color: white;
+}
+header h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+header p {
+  margin: 10px 0 20px;
+  font-size: 20px;
+  opacity: 0.9;
+}
+.icon-row a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.icon-row a:hover {
+  transform: scale(1.1);
+}
+
+/* PROJECTS SECTION */
+.projects-carousel-container {
+  position: relative;
+  margin: 20px 0;
+}
+
+.projects-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 10px 30px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar */
+.projects-carousel::-webkit-scrollbar {
+  height: 10px;
+}
+.projects-carousel::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+.projects-carousel::-webkit-scrollbar-thumb {
+  background: #4B9CD3;
+  border-radius: 5px;
+}
+.projects-carousel::-webkit-scrollbar-thumb:hover {
+  background: #0A2342;
+}
+
+/* Project Cards */
+.project-card {
+  flex: 0 0 300px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border-top: 4px solid #0A2342;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Buttons */
+.badge-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+}
+.badge-links img {
+  max-width: 150px;
+}
+
+
+
+
 <!-- PROJECTS SECTION -->
 <main>
 <h2>My Data Science Projects</h2>
