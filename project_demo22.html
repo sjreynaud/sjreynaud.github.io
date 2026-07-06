@@ -1,306 +1,522 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sidney Reynaud Portfolio</title>
-
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sidney J Reynaud, Jr. — Portfolio</title>
 <style>
-/* GLOBAL RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* ====== Global Reset & Base ====== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f4f7f6;
+  color: #222;
+  line-height: 1.45;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 40px 0;
-    background-color: #0A2342;
-    color: white;
+/* ====== Header (centered) ====== */
+header.site-header {
+  background: #0A2342;
+  color: #fff;
+  text-align: center; /* keep header centered */
+  padding: 36px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+header.site-header .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+header.site-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+header.site-header p.role {
+  font-size: 14px;
+  opacity: 0.95;
+  margin-top: 6px;
 }
 
-header h1 {
-    font-size: 42px;
-    font-weight: 700;
+/* Icon group (white logos) */
+.header-icons {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+}
+.header-icons a {
+  display:inline-flex;
+  width:44px;
+  height:44px;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  background: rgba(255,255,255,0.06);
+  transition: transform .15s ease, background .15s ease;
+  text-decoration:none;
+}
+.header-icons a:hover { transform: translateY(-3px); background: rgba(255,255,255,0.12); }
+
+/* SVG icons are white by default */
+.header-icons svg { width:22px; height:22px; fill:#fff; }
+
+/* ====== Page layout ====== */
+.container {
+  max-width: 1200px;
+  margin: 28px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  align-items: start;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 20px;
-    opacity: 0.9;
+/* Responsive: stack columns on small screens */
+@media (max-width: 880px) {
+  .container { grid-template-columns: 1fr; }
 }
 
-.icon-row {
-    margin-top: 20px;
+/* ====== About Me (left column) ====== */
+.aside {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 6px 20px rgba(10,35,66,0.06);
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items: center;
+}
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg,#e6eef7,#f7fbff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 4px solid #0A2342;
+}
+.profile-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+
+/* About text */
+.about-title { font-weight:700; color:#0A2342; font-size:18px; text-align:center; }
+.about-bio { font-size:14px; color:#333; text-align:center; margin-top:6px; }
+
+/* Quick contact in aside */
+.aside .contact-quick {
+  width:100%;
+  margin-top:6px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.contact-quick a {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  text-decoration:none;
+  color:#0A2342;
+  background:#f1f7fb;
+  padding:8px 10px;
+  border-radius:8px;
+  font-weight:600;
+  font-size:14px;
+}
+.contact-quick a svg { width:18px; height:18px; fill:#0A2342; }
+
+/* ====== Main content (right column) ====== */
+.main {
+  display:flex;
+  flex-direction:column;
+  gap:22px;
 }
 
-.icon-row a {
-    margin: 0 12px;
-    display: inline-block;
-    transition: transform 0.2s ease;
+/* Section header */
+.section-header {
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+}
+.section-header h2 {
+  font-size:22px;
+  color:#0A2342;
+  margin-bottom:6px;
+}
+.section-subtitle {
+  font-size:14px;
+  color:#333;
+  font-weight:700; /* Healthcare needs to be bold */
 }
 
-.icon-row a:hover {
-    transform: scale(1.1);
-}
-
-.icon-row img {
-    width: 40px;
-    filter: brightness(0) invert(1); /* Makes icons white */
-}
-
-/* MAIN CONTENT */
-main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
-    text-align: center;
-}
-
-main h2 {
-    font-size: 32px;
-    color: #0A2342;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 20px;
-    font-weight: bold;
-    color: #4B9CD3;
-    margin-bottom: 30px;
-}
-
-/* ABOUT ME SECTION */
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin: 50px auto;
-    max-width: 900px;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.about-container img {
-    width: 180px;
-    height: 180px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.about-text {
-    text-align: left;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* PROJECT CAROUSEL */
+/* ====== Projects carousel (horizontal scroll) ====== */
 .projects-carousel-container {
-    position: relative;
-    margin-top: 40px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 20px rgba(10,35,66,0.04);
 }
-
 .projects-carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 20px 10px;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+  display:flex;
+  gap:18px;
+  overflow-x:auto;
+  padding:12px 6px;
+  scroll-behavior:smooth;
+  -webkit-overflow-scrolling:touch;
 }
-
-.projects-carousel::-webkit-scrollbar {
-    height: 8px;
-}
-
-.projects-carousel::-webkit-scrollbar-track {
-    background: #e0e0e0;
-    border-radius: 4px;
-}
-
-.projects-carousel::-webkit-scrollbar-thumb {
-    background: #4B9CD3;
-    border-radius: 4px;
-}
-
+.projects-carousel::-webkit-scrollbar { height:8px; }
+.projects-carousel::-webkit-scrollbar-track { background:#eee; border-radius:6px; }
+.projects-carousel::-webkit-scrollbar-thumb { background:#4B9CD3; border-radius:6px; }
 .project-card {
-    flex: 0 0 300px;
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 25px 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid #0A2342;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 300px;
+  background:#ffffff;
+  border-radius:10px;
+  padding:18px;
+  box-shadow: 0 6px 18px rgba(10,35,66,0.04);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:center;
+  min-height:220px;
+  border-top:4px solid #0A2342;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(10,35,66,0.08); }
+.project-card h3 { font-size:16px; color:#0A2342; text-align:center; }
+.project-card p.meta { font-size:13px; color:#555; text-align:center; }
+
+/* Buttons area */
+.project-actions {
+  margin-top:auto;
+  width:100%;
+  display:flex;
+  gap:8px;
+  justify-content:center;
+}
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:8px;
+  font-weight:700;
+  font-size:13px;
+  text-decoration:none;
+  cursor:pointer;
+  border: none;
+}
+.btn-doc {
+  background: linear-gradient(90deg,#4B9CD3,#0A2342);
+  color:#fff;
+}
+.btn-outline {
+  background:transparent;
+  color:#0A2342;
+  border:2px solid rgba(10,35,66,0.08);
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+/* Single combined button as requested */
+.btn-combined {
+  background:#0A2342;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:8px;
+  font-weight:700;
+  font-size:13px;
+  text-decoration:none;
 }
 
-.project-card h3 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ====== Contact / Message section ====== */
+.contact-card {
+  background:#fff;
+  border-radius:10px;
+  padding:18px;
+  box-shadow: 0 6px 20px rgba(10,35,66,0.04);
+}
+.contact-card h3 { color:#0A2342; margin-bottom:8px; font-size:18px; }
+.contact-card p.lead { font-size:14px; color:#333; margin-bottom:12px; }
+
+.contact-form {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+}
+@media (max-width:720px) { .contact-form { grid-template-columns: 1fr; } }
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="subject"],
+.contact-form textarea {
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6eef3;
+  background:#fbfeff;
+  font-size:14px;
+  color:#222;
+}
+.contact-form textarea { min-height:120px; resize:vertical; grid-column: 1 / -1; }
+
+.form-actions {
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+  margin-top:10px;
+}
+.btn-send {
+  background:#0A2342;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:8px;
+  font-weight:700;
+  border:none;
+  cursor:pointer;
 }
 
-.badge-links a img {
-    max-width: 160px;
-}
+/* small helper */
+.small-muted { font-size:12px; color:#666; margin-top:8px; }
 
-/* CONTACT FORM */
-.contact-section {
-    margin: 60px auto;
-    max-width: 700px;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.contact-section h2 {
-    color: #0A2342;
-    margin-bottom: 20px;
-}
-
-.contact-section p {
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-form label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-form textarea {
-    height: 140px;
-}
-
-form button {
-    margin-top: 20px;
-    background-color: #0A2342;
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    cursor: pointer;
-    width: 100%;
-}
-
-form button:hover {
-    background-color: #4B9CD3;
+/* Footer */
+.site-footer {
+  max-width:1200px;
+  margin:28px auto;
+  padding:18px 20px;
+  text-align:center;
+  color:#666;
+  font-size:13px;
 }
 </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Sidney J Reynaud, Jr.</h1>
-    <p>Data Scientist | Clinical Researcher | Analytics Engineer</p>
-
-    <div class="icon-row">
-        <a href="https://linkedin.com" target="_blank">
-            <img src="linkedin_icon.png" alt="LinkedIn">
-        </a>
-        <a href="https://github.com" target="_blank">
-            <img src="github_icon.png" alt="GitHub">
-        </a>
-        <a href="Sidney_Reynaud_CV.pdf" target="_blank">
-            <img src="download_icon.png" alt="Download CV">
-        </a>
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="inner">
+    <div style="text-align:center;">
+      <h1>Sidney J Reynaud, Jr.</h1>
+      <p class="role">Data Scientist | Clinical Researcher | Analytics Engineer</p>
     </div>
+
+    <!-- icons group (white logos) -->
+    <nav class="header-icons" aria-label="Social links">
+      <!-- LinkedIn (white SVG) -->
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn (opens in new tab)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8.5 8h3.84v2.18h.05c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.2V24h-4v-7.4c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24h-4z"/></svg>
+      </a>
+
+      <!-- GitHub (white SVG) -->
+      <a href="https://github.com" target="_blank" aria-label="GitHub (opens in new tab)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 2.92-.39c.99.01 1.99.13 2.92.39 2.22-1.5 3.2-1.19 3.2-1.19.63 1.65.23 2.87.11 3.17.75.81 1.2 1.84 1.2 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.8 1.08.8 2.18 0 1.58-.01 2.86-.01 3.25 0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+
+      <!-- Download CV (white download icon) -->
+      <a href="Sidney_Reynaud_cv.pdf" target="_blank" aria-label="Download CV (opens in new tab)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM12 3l-5 5h3v4h4V8h3l-5-5z"/></svg>
+      </a>
+    </nav>
+  </div>
 </header>
 
-<main>
+<!-- MAIN LAYOUT -->
+<main class="container" role="main">
 
-    <h2>My Data Science Projects</h2>
-    <div class="subtitle">Healthcare</div>
-
-    <!-- ABOUT ME -->
-    <div class="about-container">
-        <img src="profile.jpg" alt="Profile Picture">
-        <div class="about-text">
-            <h3>About Me</h3>
-            <p>
-                I am a clinical data scientist specializing in predictive modeling, survival analytics,
-                and healthcare research. My work spans oncology, nephrology, psychiatry, and pediatric
-                developmental analytics. I build reproducible dashboards, pipelines, and research tools
-                that help clinicians make better decisions.
-            </p>
-        </div>
+  <!-- LEFT: About Me -->
+  <aside class="aside" aria-labelledby="about-heading">
+    <div class="profile-photo" aria-hidden="true">
+      <!-- Replace src with your profile image path -->
+      <img src="https://via.placeholder.com/400x400.png?text=Profile+Photo" alt="Sidney J Reynaud profile photo">
+    </div>
+    <div style="text-align:center;">
+      <div class="about-title" id="about-heading">About Me</div>
+      <div class="about-bio">Data Scientist • Clinical Researcher • Analytics Engineer. Passionate about healthcare analytics, reproducible research, and building dashboards that inform clinical decisions.</div>
     </div>
 
-    <!-- PROJECT CAROUSEL -->
-    <div class="projects-carousel-container">
-        <div class="projects-carousel">
+    <div class="contact-quick" aria-label="Quick contact">
+      <a href="mailto:sidney@example.com?subject=Portfolio%20Inquiry" title="Email Sidney">
+        <!-- email icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+        Email me
+      </a>
 
-            <!-- Example Project -->
-            <div class="project-card">
-                <h3>Breast Cancer Survival</h3>
-                <div class="badge-links">
-                    <a href="https://github.com/sjreynaud.github.io/tree/main/Breast%20Cancer%20Survival" target="_blank">
-                        <img src="https://img.shields.io/badge/Document_&_Dashboard-0A2342?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgo=">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Repeat for all projects -->
-            <!-- FSGS, Colon Cancer, Prostate Cancer, Bipolar, Autism, etc. -->
-
-        </div>
+      <a href="mailto:sidney@example.com?subject=Collaboration%20Request" title="Send a message">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12l8-5H4l8 5zm0 2l-8-5v8h16v-8l-8 5z"/></svg>
+        Send a message
+      </a>
     </div>
 
+    <div style="width:100%; margin-top:8px; text-align:center;">
+      <small class="small-muted">Want a different contact method? Use the form on the right or email me directly at <strong>sidney@example.com</strong>.</small>
+    </div>
+  </aside>
+
+  <!-- RIGHT: Main content -->
+  <section class="main" aria-labelledby="projects-heading">
+
+    <!-- Projects header -->
+    <div class="section-header">
+      <div>
+        <h2 id="projects-heading">My Data Science Projects</h2>
+        <div class="section-subtitle"><strong>Healthcare</strong></div>
+      </div>
+      <div style="align-self:flex-end;">
+        <small class="small-muted">Horizontal carousel — swipe or scroll to view more projects</small>
+      </div>
+    </div>
+
+    <!-- Projects carousel container -->
+    <div class="projects-carousel-container" aria-roledescription="carousel">
+      <div class="projects-carousel" role="list">
+
+        <!-- Project card template (repeat for each project) -->
+        <article class="project-card" role="listitem" aria-label="Project 1: Breast Cancer Survival">
+          <h3>Project 1: Breast Cancer Survival</h3>
+          <p class="meta">Survival analysis, feature engineering, model explainability</p>
+
+          <!-- Combined button linking to both document and dashboard (user can change hrefs) -->
+          <div class="project-actions">
+            <a class="btn-combined" href="https://github.com/sjreynaud.github.io/tree/main/Breast%20Cancer%20Survival" target="_blank" rel="noopener">
+              Document and View Dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" aria-label="Project 2: FSGS Kidney Disease">
+          <h3>Project 2: FSGS Kidney Disease</h3>
+          <p class="meta">Clinical cohort analysis, EDA, reproducible notebooks</p>
+          <div class="project-actions">
+            <a class="btn-combined" href="https://github.com/sjreynaud.github.io/tree/main/FSGS%20Kidney%20Disease" target="_blank" rel="noopener">
+              Document and View Dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" aria-label="Project 3: Colon Cancer Survival">
+          <h3>Project 3: Colon Cancer Survival</h3>
+          <p class="meta">Time-to-event modeling, calibration, and dashboards</p>
+          <div class="project-actions">
+            <a class="btn-combined" href="https://github.com/sjreynaud.github.io/tree/main/Colon%20Cancer%20Survival" target="_blank" rel="noopener">
+              Document and View Dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" aria-label="Project 4: Prostate Cancer Survival">
+          <h3>Project 4: Prostate Cancer Survival</h3>
+          <p class="meta">Risk stratification and interactive visualizations</p>
+          <div class="project-actions">
+            <a class="btn-combined" href="https://github.com/sjreynaud.github.io/tree/main/Prostate%20Cancer%20Survival" target="_blank" rel="noopener">
+              Document and View Dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" aria-label="Project 5: Bankruptcy-EDA-Clustering">
+          <h3>Project 5: Bankruptcy-EDA-Clustering</h3>
+          <p class="meta">Clustering, dimensionality reduction, EDA</p>
+          <div class="project-actions">
+            <a class="btn-combined" href="LINK_TO_DOCS_5" target="_blank" rel="noopener">
+              Document and View Dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" aria-label="Project 6: Bipolar Disorder">
+          <h3>Project 6: Bipolar Disorder</h3>
+          <p class="meta">Clinical feature extraction and predictive modeling</p>
+          <div class="project-actions">
+            <a class="btn-combined" href="LINK_TO_DOCS_6" target="_blank" rel="noopener">
+              Document and View Dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" aria-label="Project 7: Autism Spectrum">
+          <h3>Project 7: Autism Spectrum</h3>
+          <p class="meta">Behavioral signal processing and dashboarding</p>
+          <div class="project-actions">
+            <a class="btn-combined" href="LINK_TO_DOCS_7" target="_blank" rel="noopener">
+              Document and View Dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" aria-label="Project 8: Lymph Node Cancer">
+          <h3>Project 8: Lymph Node Cancer</h3>
+          <p class="meta">Imaging features and survival modeling</p>
+          <div class="project-actions">
+            <a class="btn-combined" href="LINK_TO_DOCS_8" target="_blank" rel="noopener">
+              Document and View Dashboard
+            </a>
+          </div>
+        </article>
+
+      </div> <!-- end carousel -->
+    </div> <!-- end container -->
+
+    <!-- Contact / Message card -->
+    <div class="contact-card" aria-labelledby="contact-heading">
+      <h3 id="contact-heading">Send me a message</h3>
+      <p class="lead">Interested in collaborating or have questions about my work? I’d love to hear from you.</p>
+
+      <!-- Contact form: posts to mailto fallback via JS; also includes mailto link -->
+      <form class="contact-form" id="contactForm" onsubmit="return handleContactSubmit(event);">
+        <input type="text" name="name" id="name" placeholder="Your name" required aria-label="Your name">
+        <input type="email" name="email" id="email" placeholder="Your email" required aria-label="Your email">
+        <input type="text" name="subject" id="subject" placeholder="Subject" aria-label="Subject">
+        <textarea name="message" id="message" placeholder="Your message" required aria-label="Your message"></textarea>
+
+        <div style="grid-column:1 / -1; display:flex; justify-content:space-between; align-items:center; gap:12px;">
+          <div class="small-muted">Or email directly: <a href="mailto:sidney@example.com">sidney@example.com</a></div>
+          <div class="form-actions">
+            <button type="reset" class="btn btn-outline" style="padding:8px 12px;">Reset</button>
+            <button type="submit" class="btn-send">Send Message</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </section>
 </main>
 
-<!-- CONTACT FORM -->
-<div class="contact-section">
-    <h2>Send Me a Message</h2>
-    <p>Interested in collaborating or have questions about my work? I’d love to hear from you!</p>
+<!-- Footer -->
+<footer class="site-footer" role="contentinfo">
+  © <span id="year"></span> Sidney J Reynaud, Jr. • Built for clarity and reproducibility.
+</footer>
 
-    <form action="mailto:YOUR_EMAIL@domain.com" method="POST" enctype="text/plain">
-        <label>Name</label>
-        <input type="text" name="name" placeholder="Your name">
+<script>
+  // set current year
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Your email">
+  // Contact form handler: opens user's email client with prefilled content as fallback
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    const name = encodeURIComponent(document.getElementById('name').value.trim());
+    const email = encodeURIComponent(document.getElementById('email').value.trim());
+    const subject = encodeURIComponent(document.getElementById('subject').value.trim() || 'Portfolio Inquiry');
+    const message = encodeURIComponent(document.getElementById('message').value.trim());
 
-        <label>Subject</label>
-        <input type="text" name="subject" placeholder="Subject">
+    // Build mailto link
+    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${message}`;
+    const mailto = `mailto:sidney@example.com?subject=${subject}&body=${body}`;
 
-        <label>Message</label>
-        <textarea name="message" placeholder="Your message"></textarea>
-
-        <button type="submit">Send Message</button>
-    </form>
-</div>
-
+    // Try to open mail client
+    window.location.href = mailto;
+    return false;
+  }
+</script>
 </body>
 </html>
-
