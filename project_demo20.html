@@ -1,1 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidney J Reynaud Jr – Portfolio</title>
+
+<style>
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #0A2342;
+    color: white;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.icon-row {
+    margin-top: 20px;
+}
+
+.icon-row a {
+    margin: 0 12px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.icon-row a:hover {
+    transform: scale(1.1);
+}
+
+.icon-row img {
+    width: 40px;
+    filter: brightness(0) invert(1); /* WHITE ICONS */
+}
+
+/* ABOUT ME SECTION */
+.about-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.about-container img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #0A2342;
+    margin-bottom: 10px;
+}
+
+/* PROJECTS SECTION */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 32px;
+    color: #0A2342;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #4B9CD3;
+}
+
+/* HORIZONTAL SCROLL */
+.projects-carousel-container {
+    margin-top: 30px;
+}
+
+.projects-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.projects-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-carousel::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb {
+    background: #4B9CD3;
+    border-radius: 4px;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb:hover {
+    background: #0A2342;
+}
+
+/* PROJECT CARDS */
+.project-card {
+    flex: 0 0 300px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #0A2342;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    min-height: 44px;
+}
+
+/* BUTTON */
+.project-card a {
+    display: inline-block;
+    background-color: #4B9CD3;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.project-card a:hover {
+    background-color: #0A2342;
+}
+
+/* CONTACT FORM */
+.contact-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: #0A2342;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #0A2342;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+form button:hover {
+    background-color: #4B9CD3;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>Sidney J Reynaud, Jr.</h1>
+    <p>Data Scientist | Clinical Researcher | Analytics Engineer</p>
+
+    <div class="icon-row">
+        <a href="https://linkedin.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+        </a>
+        <a href="Sidney_Reynaud_CV.pdf" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Download CV">
+        </a>
+    </div>
+</header>
+
+<!-- ABOUT ME -->
+<div class="about-container">
+    <img src="YOUR_PROFILE_PICTURE.jpg" alt="Profile Picture">
+    <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+            Add your professional summary here — your clinical analytics focus, your research domains,
+            your data science toolkit, and your mission in healthcare innovation.
+        </p>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<main>
+    <h2>My Data Science Projects</h2>
+    <div class="subtitle">Healthcare</div>
+
+    <div class="projects-carousel-container">
+        <div class="projects-carousel">
+
+            <!-- Project Template -->
+            <div class="project-card">
+                <h3>Breast Cancer Survival</h3>
+                <a href="LINK_TO_DOCS_AND_DASHBOARD" target="_blank">Documents & View Dashboard</a>
+            </div>
+
+            <div class="project-card">
+                <h3>FSGS Kidney Disease</h3>
+                <a href="LINK_TO_DOCS_AND_DASHBOARD" target="_blank">Documents & View Dashboard</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Colon Cancer Survival</h3>
+                <a href="LINK_TO_DOCS_AND_DASHBOARD" target="_blank">Documents & View Dashboard</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Prostate Cancer Survival</h3>
+                <a href="LINK_TO_DOCS_AND_DASHBOARD" target="_blank">Documents & View Dashboard</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Bankruptcy EDA & Clustering</h3>
+                <a href="LINK_TO_DOCS_AND_DASHBOARD" target="_blank">Documents & View Dashboard</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Bipolar Disorder</h3>
+                <a href="LINK_TO_DOCS_AND_DASHBOARD" target="_blank">Documents & View Dashboard</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Autism Spectrum</h3>
+                <a href="LINK_TO_DOCS_AND_DASHBOARD" target="_blank">Documents & View Dashboard</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Lymph Node Cancer</h3>
+                <a href="LINK_TO_DOCS_AND_DASHBOARD" target="_blank">Documents & View Dashboard</a>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- CONTACT FORM -->
+<div class="contact-section">
+    <h2>Send Me a Message</h2>
+    <form action="mailto:YOUR_EMAIL@domain.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your name">
+        <input type="email" name="email" placeholder="Your email">
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" rows="6" placeholder="Your message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+</body>
+</html>
 
