@@ -1,1 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidney Reynaud Portfolio</title>
+
+<style>
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #0A2342;
+    color: white;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.icon-row {
+    margin-top: 20px;
+}
+
+.icon-row a {
+    margin: 0 12px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.icon-row a:hover {
+    transform: scale(1.1);
+}
+
+.icon-row img {
+    width: 40px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+/* MAIN CONTENT */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 32px;
+    color: #0A2342;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4B9CD3;
+    margin-bottom: 30px;
+}
+
+/* ABOUT ME SECTION */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 900px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.about-container img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-text {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* PROJECT CAROUSEL */
+.projects-carousel-container {
+    position: relative;
+    margin-top: 40px;
+}
+
+.projects-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.projects-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-carousel::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb {
+    background: #4B9CD3;
+    border-radius: 4px;
+}
+
+.project-card {
+    flex: 0 0 300px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #0A2342;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-links a img {
+    max-width: 160px;
+}
+
+/* CONTACT FORM */
+.contact-section {
+    margin: 60px auto;
+    max-width: 700px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-section h2 {
+    color: #0A2342;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 140px;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: #0A2342;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #4B9CD3;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sidney J Reynaud, Jr.</h1>
+    <p>Data Scientist | Clinical Researcher | Analytics Engineer</p>
+
+    <div class="icon-row">
+        <a href="https://linkedin.com" target="_blank">
+            <img src="linkedin_icon.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com" target="_blank">
+            <img src="github_icon.png" alt="GitHub">
+        </a>
+        <a href="Sidney_Reynaud_CV.pdf" target="_blank">
+            <img src="download_icon.png" alt="Download CV">
+        </a>
+    </div>
+</header>
+
+<main>
+
+    <h2>My Data Science Projects</h2>
+    <div class="subtitle">Healthcare</div>
+
+    <!-- ABOUT ME -->
+    <div class="about-container">
+        <img src="profile.jpg" alt="Profile Picture">
+        <div class="about-text">
+            <h3>About Me</h3>
+            <p>
+                I am a clinical data scientist specializing in predictive modeling, survival analytics,
+                and healthcare research. My work spans oncology, nephrology, psychiatry, and pediatric
+                developmental analytics. I build reproducible dashboards, pipelines, and research tools
+                that help clinicians make better decisions.
+            </p>
+        </div>
+    </div>
+
+    <!-- PROJECT CAROUSEL -->
+    <div class="projects-carousel-container">
+        <div class="projects-carousel">
+
+            <!-- Example Project -->
+            <div class="project-card">
+                <h3>Breast Cancer Survival</h3>
+                <div class="badge-links">
+                    <a href="https://github.com/sjreynaud.github.io/tree/main/Breast%20Cancer%20Survival" target="_blank">
+                        <img src="https://img.shields.io/badge/Document_&_Dashboard-0A2342?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgo=">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Repeat for all projects -->
+            <!-- FSGS, Colon Cancer, Prostate Cancer, Bipolar, Autism, etc. -->
+
+        </div>
+    </div>
+
+</main>
+
+<!-- CONTACT FORM -->
+<div class="contact-section">
+    <h2>Send Me a Message</h2>
+    <p>Interested in collaborating or have questions about my work? I’d love to hear from you!</p>
+
+    <form action="mailto:YOUR_EMAIL@domain.com" method="POST" enctype="text/plain">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your name">
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Your email">
+
+        <label>Subject</label>
+        <input type="text" name="subject" placeholder="Subject">
+
+        <label>Message</label>
+        <textarea name="message" placeholder="Your message"></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+</body>
+</html>
 
